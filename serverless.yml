@@ -102,5 +102,7 @@ functions:
           cors: true
           authorizer: aws_iam
 
-  resources:
-    - ${file(resouces/api-gateway-errors.yml)}
+  # 분리된 CloudFormation 템플릿을 생성합니다. 
+resources:
+  # API Gateway 에러 
+  - ${file(resources/api-gateway-errors.yml)}
